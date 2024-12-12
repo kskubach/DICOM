@@ -26,6 +26,7 @@ you can either use the property name or the property tag. For example, those 2 c
 Once the message is created and transferred to PACS as a document, you can see its data as part of the trace (note that binary data cannot be seen):
 
 
+![alt text](image(10184)-1.png)
 
 In order to add the binary data for the image, it is more complicated that just putting the data in a specific tag, because it needs to be structured in a specific way and measured appropriately. This is why after updating the tags and saving the document, we need to open it as a simple binary file and add the image data at the end of it in a specific manner.
 
@@ -37,19 +38,19 @@ This structure can be used in recursion, and some DICOM scenarios might use seq
 
 
 
- 
+ ![alt text](image(10183).png)
 
 The demo shows a sample of creating a DICOM document with an image in it. The patient's demographic and other details are just for the sake of teh sample. To run this demo, simply put a JPG file in a directory, configure the directory name in the 'FileStorageDirectory' property in the business operation's settings:
 
 
 
- 
+ ![alt text](image(10185).png)
 
 and run the Business Process. After its completion, you'll see a new dcm file in the same directory where your JPG file was. open it in a DICOM viewer and you'll see the DICOM tags as well as the image in it:
 
+![alt text](image(10186).png)
 
-
-Here is a quick demo showing the whole process:
+Here is a quick video demo showing the whole process:
 
 
 Good luck!
