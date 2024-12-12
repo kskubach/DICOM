@@ -53,6 +53,15 @@ and run the Business Process. After its completion, you'll see a new dcm file in
 Here is a quick video demo showing the whole process:
 
 
+To run the demo:
+1. Configure the 'FileStorageDirectory' property in the business operation's settings to point to a local existing directory.
+2. Put the 'NormalColon.jpg' file in that directory.
+3. Start the production
+4. Invoke the Business process (Ations->Test). No data needs to be sent, just an empty Ens.StringRequest message.
+5. Look at the visual trace - the first call to the business operation created the DICOM document and update its tags (incuding the JPG dimentions). The second call accepts the message, creates and saves a DICOM file from it, and than opens the file as a binary file to add the image data as a sequence at the file's end.
+6. Check the existing files in the directory - a new file should be created with a '.dcm' suffix.
+7. Open the file in a DICOM viewer and see the DICOM tags and image data.
+
 Good luck!
 
 Keren.
